@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyen Vinh Phuc – Portfolio</title>
+<meta name="description" content="Portfolio of Nguyen Vinh Phuc – Software Engineering graduate, C# / ASP.NET Core developer.">
+<style>
+  :root {
+    --bg: #0f172a; --panel: #1e293b; --line: #334155;
+    --text: #e2e8f0; --muted: #94a3b8; --accent: #38bdf8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  nav { position: sticky; top: 0; background: rgba(15,23,42,.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); z-index: 10; }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  nav .logo { font-weight: 700; color: var(--text); }
+  nav ul { display: flex; gap: 22px; list-style: none; }
+  nav ul a { color: var(--muted); font-size: 15px; }
+  nav ul a:hover { color: var(--accent); text-decoration: none; }
+
+  header { padding: 96px 0 72px; }
+  header .hi { color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+  header h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; margin-bottom: 12px; }
+  header h2 { font-size: clamp(20px, 3vw, 26px); color: var(--muted); font-weight: 500; margin-bottom: 20px; }
+  header p { max-width: 620px; color: var(--muted); margin-bottom: 28px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { padding: 10px 20px; border-radius: 8px; font-weight: 600; border: 1px solid var(--accent); }
+  .btn.primary { background: var(--accent); color: #0f172a; }
+  .btn:hover { text-decoration: none; opacity: .9; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  section h3 { font-size: 26px; margin-bottom: 24px; }
+  section h3 span { color: var(--accent); }
+
+  .about { color: var(--muted); max-width: 720px; }
+  .about p + p { margin-top: 12px; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .card h4 { margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: rgba(56,189,248,.12); color: var(--accent); }
+
+  .projects { display: grid; gap: 18px; }
+  .project .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+  .project .meta { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+  .project ul { padding-left: 20px; color: var(--muted); margin-bottom: 14px; }
+  .project li { margin-bottom: 4px; }
+  .badge { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
+
+  .timeline .item { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .timeline .item + .item { margin-top: 14px; }
+  .timeline .muted { color: var(--muted); }
+
+  .contact p { color: var(--muted); margin-bottom: 20px; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; padding: 32px 0; border-top: 1px solid var(--line); }
+
+  @media (max-width: 640px) { nav ul { gap: 14px; } nav ul li.hide-sm { display: none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">NVP<span style="color:var(--accent)">.</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li class="hide-sm"><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="hi">Hi, my name is</p>
+    <h1>Nguyen Vinh Phuc</h1>
+    <h2>Software Engineering Graduate – Fresher</h2>
+    <p>I build backend applications with C# / ASP.NET Core and SQL Server. Open to software development and IT support / helpdesk roles in Can Tho or remote.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View my projects</a>
+      <a class="btn" href="NguyenVinhPhuc_CV.pdf" target="_blank">Download CV</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h3><span>01.</span> About me</h3>
+    <div class="about">
+      <p>I am a Software Engineering student at FPT University – Can Tho Campus, expected to graduate in December 2026.</p>
+      <p>During university I worked on team projects using ASP.NET Core, Entity Framework Core, SQL Server and Java. In my capstone project, SmartLiving, I built the maintenance module end-to-end and wrote automated integration tests. I enjoy solving problems, learning new technologies and helping users with technical issues.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h3><span>02.</span> Skills</h3>
+    <div class="skills">
+      <div class="card">
+        <h4>Backend</h4>
+        <div class="tags"><span class="tag">C#</span><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">SignalR</span><span class="tag">JWT</span><span class="tag">RESTful API</span><span class="tag">Java</span></div>
+      </div>
+      <div class="card">
+        <h4>Database &amp; Frontend</h4>
+        <div class="tags"><span class="tag">SQL Server</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      </div>
+      <div class="card">
+        <h4>Tools</h4>
+        <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Visual Studio</span><span class="tag">Swagger</span><span class="tag">NetBeans</span><span class="tag">Maven</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h3><span>03.</span> Projects</h3>
+    <div class="projects">
+
+      <div class="card project">
+        <div class="top"><h4>SmartLiving – Smart Rental Management Platform</h4><span class="badge">Capstone · 2026</span></div>
+        <p class="meta">Full-stack Developer · Team of 4 · ASP.NET Core 8, EF Core, SQL Server, Redis, YARP, React, TypeScript, Python FastAPI</p>
+        <ul>
+          <li>Rental platform for mini-apartment owners, residents and technicians: rooms, contracts, utility billing, maintenance and AI fault diagnosis.</li>
+          <li>Built the maintenance module end-to-end (25 use cases): request lifecycle, technician assignment, quotes and cost assessment.</li>
+          <li>Implemented admin verification review and audit log with optimistic concurrency.</li>
+          <li>Wrote xUnit integration tests and led test documentation (514 automated tests, 100% pass).</li>
+        </ul>
+        <span class="badge">Private repository – available on request</span>
+      </div>
+
+      <div class="card project">
+        <div class="top"><h4>Mini Social Network</h4><span class="badge">Team project · 2026</span></div>
+        <p class="meta">Developer · Team of 4 · C#, ASP.NET Core 8, EF Core, SQL Server, SignalR, JWT</p>
+        <ul>
+          <li>Social network backend with profiles, feed, comments, reactions, groups, chat and admin dashboard.</li>
+          <li>Implemented posts, comments, group chat and admin dashboard APIs with validation, paging and SignalR.</li>
+        </ul>
+        <a href="https://github.com/HienSEwork/MiniSocialNetWork" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card project">
+        <div class="top"><h4>SWP Project – Car Showroom Web App</h4><span class="badge">Academic · 2025</span></div>
+        <p class="meta">Developer · Team of 5 · Java, Maven, Servlet/JSP, SQL Server</p>
+        <ul>
+          <li>Car and spare-part sales, maintenance booking, cart and checkout (MVC).</li>
+          <li>Built the authentication module with role-based redirection, password reset and remember-me.</li>
+          <li>Implemented admin management pages for user accounts and maintenance services.</li>
+        </ul>
+        <a href="https://github.com/HienNNCE/SWP_PROJECT" target="_blank">View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h3><span>04.</span> Education &amp; Certifications</h3>
+    <div class="card timeline">
+      <div class="item"><strong>FPT University – Can Tho Campus · Bachelor of Software Engineering</strong><span class="muted">2021 – Dec 2026 (expected)</span></div>
+      <div class="item"><span>Coursera: Software Development Lifecycle · Web Design for Everybody · CertNexus Certified Ethical Emerging Technologist · Computer Communications · Project Management Principles and Practices</span></div>
+      <div class="item"><span class="muted">English: Intermediate – preparing for the TOEIC exam</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h3><span>05.</span> Contact</h3>
+    <p>I am currently looking for a fresher position. Feel free to reach out!</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:nvp100603@gmail.com">nvp100603@gmail.com</a>
+      <a class="btn" href="tel:0372611457">0372 611 457</a>
+      <a class="btn" href="https://github.com/nvp10062003" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Nguyen Vinh Phuc</footer>
+
+</body>
+</html>
